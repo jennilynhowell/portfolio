@@ -39,6 +39,7 @@
 
     <!--My custom styles-->
     <link rel="stylesheet" href="/assets/css/styles.css"/>
+    <link rel="icon" href="/assets/img/tropical-pineapple-black.png"/>
 
 </head>
 
@@ -117,7 +118,7 @@
                         <i class="fa fa-hashtag fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">HTML and CSS</h4>
-                    <p class="text-muted">Solid HTML, CSS, and Bootstrap skills, with exposure to Sass.</p>
+                    <p class="text-muted">Solid HTML, CSS, and Bootstrap skills, with exposure to Sass and JQuery.</p>
                 </div>
             </div>
             <div class="row text-center">
@@ -159,6 +160,7 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col-md-2"></div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <div class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
                         <div class="portfolio-hover">
@@ -166,9 +168,10 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="/assets/img/portfolio/CodeTrapper3b.png" alt=""/>
+                        <img class="img-fluid portfolio-img" src="/assets/img/portfolio/CodeTrapper3b.png" alt=""/>
                     </div>
                     <div class="portfolio-caption">
+                        <!--Modal 3-->
                         <h4>CodeTrapper</h4>
                         <p class="text-muted">store your code snippets</p>
                     </div>
@@ -180,15 +183,18 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="/assets/img/portfolio/MysteryWord2.png" alt=""/>
+                        <img class="img-fluid portfolio-img" src="/assets/img/portfolio/MysteryWord2.png" alt=""/>
                     </div>
                     <div class="portfolio-caption">
+                        <!--Modal 4-->
                         <h4>MysteryWord</h4>
                         <p class="text-muted">hangman-style game</p>
                     </div>
                 </div>
+                <div class="col-md-2"></div>
             </div>
             <div class="row">
+                <div class="col-md-2"></div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <div class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
                         <div class="portfolio-hover">
@@ -196,9 +202,10 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="/assets/img/portfolio/Songbird2.png" alt=""/>
+                        <img class="img-fluid portfolio-img" src="/assets/img/portfolio/Songbird2.png" alt=""/>
                     </div>
                     <div class="portfolio-caption">
+                        <!--Modal 5-->
                         <h4>Songbird</h4>
                         <p class="text-muted">search for and play a song</p>
                     </div>
@@ -210,24 +217,26 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="/assets/img/portfolio/Gabble2.png" alt=""/>
+                        <img class="img-fluid portfolio-img" src="/assets/img/portfolio/Gabble2.png" alt=""/>
                     </div>
                     <div class="portfolio-caption">
+                        <!--Modal 6-->
                         <h4>Gabble</h4>
                         <p class="text-muted">pseudo-twitter</p>
                     </div>
                 </div>
+                <div class="col-md-2"></div>
             </div>
         </div>
     </section>
 
     <!-- About -->
     <section id="about">
-        <div class="container">
+        <div class="container about-container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">my journey</h3>
+                    <h2 class="section-heading">Resume</h2>
+                    <h3 class="section-subheading text-muted">a tldr version</h3>
                 </div>
             </div>
             <div class="row">
@@ -241,7 +250,7 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>2010-2015</h4>
-                                    <h4 class="subheading">Boutique Retail</h4>
+                                    <h4 class="subheading">Boutique Retail Leadership</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">Grew sales, engaged teammembers, cultivated unique shopping experiences for clients.</p>
@@ -327,6 +336,8 @@
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <p class="large text-muted">I'm Jennilyn, a web developer from beautiful Greenville, SC. I love programming, laughing, drinking coffee, and playing with dogs.</p>
                     <p class="text-muted">Thanks to a crossword-crazy granny (Hi Grandma!) I grew up loving puzzles, the strategy involved in tackling them, and the excitement when you finally fill in the last letter or place the last pesky piece. Programming excites me in the same way. Never will I run out of things to learn or puzzles to solve.</p>
+                    <p class="text-muted">Feel free to contact me (below) if I can support your business, whether as a developer or contractor. I look forward to hearing from you!</p>
+
                 </div>
             </div>
         </div>
@@ -340,7 +351,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Me</h2>
-                    <h3 class="section-subheading text-muted">Whoa, you're at the bottom! Might as well drop me a note. What can I do for your business?</h3>
+                    <h3 class="section-subheading text-muted contact-invite">I'd love to hear from you. Please drop me a note!</h3>
                 </div>
             </div>
             <div class="row">
@@ -357,7 +368,7 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" name="phone" data-validation-required-message="Please enter your phone number."/>
+                                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone" name="phone"/>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -407,6 +418,7 @@
                         <li class="list-inline-item">
                             <a href="https://github.com/BlackrockDigital/startbootstrap-agency">Theme &copy; Blackrock Digital, LLC 2013-2017</a>
                         </li>
+                        <li class="favicon-credit">Favicon &copy; <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -415,73 +427,7 @@
 
     <!-- Portfolio Modals -->
 
-    <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>The Shady Lady</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/01-full.jpg" alt=""/>
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Threads</li>
-                                    <li>Category: Illustration</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/02-full.jpg" alt=""/>
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Explore</li>
-                                    <li>Category: Graphic Design</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 3 -->
+    <!-- Modal 3 CODETRAPPER-->
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -496,14 +442,15 @@
                         <div class="col-lg-8 offset-lg-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/03-full.jpg" alt=""/>
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <h2>CodeTrapper</h2>
+                                <p class="item-intro text-muted">Store code snippets or notes.</p>
+                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/CodeTrapper-large.png" alt=""/>
+                                <p>This is a Node app utilizing one:many relationships in MongoDB (Mongoose). Passwords are stored as hashes. The user is able to store snippets, make notes about them, tag them, and of course edit/delete them.</p>
                                 <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Finish</li>
-                                    <li>Category: Identity</li>
+                                    <li><a href="https://hidden-cove-46175.herokuapp.com/app/user/login" target="_blank">View Live</a></li>
+                                    <li><a href="https://github.com/jennilynhowell/week-eight-snippets" target="_blank">View Code</a></li>
+                                    <li>Date: July 2017</li>
+                                    <li>Category: Node</li>
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -514,7 +461,7 @@
         </div>
     </div>
 
-    <!-- Modal 4 -->
+    <!-- Modal 4 MYSTERYWORD-->
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -529,14 +476,14 @@
                         <div class="col-lg-8 offset-lg-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/04-full.jpg" alt=""/>
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <h2>Mystery Word</h2>
+                                <p class="item-intro text-muted">Play a hangman-style word game.</p>
+                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/MysteryWord-large.png" alt=""/>
+                                <p>This was a really fun project -- I enjoyed the challenge of getting the computer to generate a word, then changing the display based on the word and user guesses. There is no auth but the user is required to enter his name and select a difficulty level.</p>
                                 <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Lines</li>
-                                    <li>Category: Branding</li>
+                                    <li><a href="https://github.com/jennilynhowell/week-five-project" target="_blank">View Code</a></li>
+                                    <li>Date: June 2017</li>
+                                    <li>Category: Node</li>
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -547,7 +494,7 @@
         </div>
     </div>
 
-    <!-- Modal 5 -->
+    <!-- Modal 5 SONGBIRD -->
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -562,14 +509,15 @@
                         <div class="col-lg-8 offset-lg-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/05-full.jpg" alt=""/>
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <h2>Songbird</h2>
+                                <p class="item-intro text-muted">Fun music playback app.</p>
+                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/Songbird-large.png" alt=""/>
+                                <p>This app is connected to the SoundCloud API using JQuery. Feel free to search for and play your favorite song!</p>
                                 <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Southwest</li>
-                                    <li>Category: Website Design</li>
+                                    <li><a href="https://jennilynhowell.github.io/week-four-project/" target="_blank">View Live</a></li>
+                                    <li><a href="https://github.com/jennilynhowell/week-four-project" target="_blank">View Code</a></li>
+                                    <li>Date: June 2017</li>
+                                    <li>Category: JQuery</li>
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -580,7 +528,7 @@
         </div>
     </div>
 
-    <!-- Modal 6 -->
+    <!-- Modal 6 GABBLE-->
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -595,14 +543,14 @@
                         <div class="col-lg-8 offset-lg-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/06-full.jpg" alt=""/>
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <h2>Gabble</h2>
+                                <p class="item-intro text-muted">A sort-of twitter.</p>
+                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/Gabble-large.png" alt=""/>
+                                <p>This was my first real Node project that required a persistent data structure. I utilized one:many and many:many relationships in a PostgreSQL database (Sequelize). A user can create a login, share a "gab", like others' gabs, and delete his own gabs.</p>
                                 <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Window</li>
-                                    <li>Category: Photography</li>
+                                    <li><a href="https://github.com/jennilynhowell/week-six-project" target="_blank">View Code</a></li>
+                                    <li>Date: June 2017</li>
+                                    <li>Category: Node</li>
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
                             </div>

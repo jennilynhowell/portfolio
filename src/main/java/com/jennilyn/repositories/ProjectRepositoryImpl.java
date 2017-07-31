@@ -26,6 +26,11 @@ public class ProjectRepositoryImpl implements ProjectRepository {
         jdbcTemplate.update("DELETE FROM project WHERE id = ?", id);
     }
 
+    @Override
+    public void add(String title, String subheader, String description, String monthCreated, String category, String gitUrl, String liveUrl, String thumbnailUrl, String largeUrl) {
+        jdbcTemplate.update("INSERT INTO project (title, subheader, description, giturl, liveurl, monthcreated, category, thumbnailurl, largeurl) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", title, subheader, description, gitUrl, liveUrl, monthCreated, category, thumbnailUrl, largeUrl);
+    }
+
     private static class ProjectMapper implements RowMapper<Project> {
         @Override
         public Project mapRow(ResultSet resultSet, int i) throws SQLException {

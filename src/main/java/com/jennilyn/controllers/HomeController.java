@@ -31,6 +31,21 @@ public class HomeController {
         return "admin";
     }
 
+    @RequestMapping(value = "/createItem", method = RequestMethod.POST)
+    public String createItem(@RequestParam("title") String title,
+                             @RequestParam("subheader") String subheader,
+                             @RequestParam("description") String description,
+                             @RequestParam("monthCreated") String monthCreated,
+                             @RequestParam("category") String category,
+                             @RequestParam("gitUrl") String gitUrl,
+                             @RequestParam("liveUrl") String liveUrl,
+                             @RequestParam("thumbnailUrl") String thumbnailUrl,
+                             @RequestParam("largeUrl") String largeUrl) {
+        repo.add(title, subheader, description, monthCreated, category, gitUrl, liveUrl, thumbnailUrl, largeUrl);
+
+        return "redirect:/admin";
+    }
+
     @RequestMapping(value = "/deleteItem", method = RequestMethod.POST)
     public String deleteItem(@RequestParam("id") long id) {
         repo.delete(id);

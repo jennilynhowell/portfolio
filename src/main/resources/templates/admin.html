@@ -26,18 +26,19 @@
     <h1>Portfolio Admin</h1>
 
     <div class="row">
-        <div class="container">
+        <div class="container col-md-8">
+            <h4>Add a new project</h4>
             <form action="/createItem" method="post" class="form-control">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <input type="text" name="title" placeholder="Title"/>
+                <input type="text" name="subheader" placeholder="Subheader"/>
+                <input type="text" name="description" placeholder="Description"/>
+                <input type="text" name="monthCreated" placeholder="Month Created"/>
+                <input type="text" name="category" placeholder="Category"/>
+                <input type="text" name="gitUrl" placeholder="GitHub URL"/>
+                <input type="text" name="liveUrl" placeholder="Production URL"/>
+                <input type="text" name="thumbnailUrl" placeholder="Small img SRC/URL"/>
+                <input type="text" name="largeUrl" placeholder="Large img SRC/URL"/>
+                <input type="submit" value="Add"/>
             </form>
         </div>
     </div>
@@ -57,7 +58,7 @@
                 <li>Large URL: <p th:text="${project.largeUrl}"></p></li>
                 <li>
                     <form action="/deleteItem" method="post">
-                        <input type="hidden" value="${project.id}"/>
+                        <input type="hidden" name="id" th:value="${project.id}"/>
                         <input type="submit" value="Delete"/>
                     </form>
                 </li>

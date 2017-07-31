@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
@@ -160,72 +160,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                <div class="col-md-4 col-sm-6 portfolio-item" th:each="project: ${projects}">
+                    <div class="portfolio-link" data-toggle="modal" th:href="'#portfolioModal' + ${project.id}">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid portfolio-img" src="/assets/img/portfolio/CodeTrapper3b.png" alt=""/>
+                        <img class="img-fluid portfolio-img" th:src="${project.thumbnailUrl}" alt=""/>
                     </div>
                     <div class="portfolio-caption">
-                        <!--Modal 3-->
-                        <h4>CodeTrapper</h4>
-                        <p class="text-muted">store your code snippets</p>
+                        <h4 th:text="${project.title}"></h4>
+                        <p class="text-muted" th:text="${project.subheader}"></p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid portfolio-img" src="/assets/img/portfolio/MysteryWord2.png" alt=""/>
-                    </div>
-                    <div class="portfolio-caption">
-                        <!--Modal 4-->
-                        <h4>MysteryWord</h4>
-                        <p class="text-muted">hangman-style game</p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid portfolio-img" src="/assets/img/portfolio/Songbird2.png" alt=""/>
-                    </div>
-                    <div class="portfolio-caption">
-                        <!--Modal 5-->
-                        <h4>Songbird</h4>
-                        <p class="text-muted">search for and play a song</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid portfolio-img" src="/assets/img/portfolio/Gabble2.png" alt=""/>
-                    </div>
-                    <div class="portfolio-caption">
-                        <!--Modal 6-->
-                        <h4>Gabble</h4>
-                        <p class="text-muted">pseudo-twitter</p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
             </div>
         </div>
     </section>
@@ -427,8 +375,7 @@
 
     <!-- Portfolio Modals -->
 
-    <!-- Modal 3 CODETRAPPER-->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div th:each="project: ${projects}" class="portfolio-modal modal fade" th:id="'portfolioModal' + ${project.id}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -442,115 +389,15 @@
                         <div class="col-lg-8 offset-lg-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>CodeTrapper</h2>
-                                <p class="item-intro text-muted">Store code snippets or notes.</p>
-                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/CodeTrapper-large.png" alt=""/>
-                                <p>This is a Node app utilizing one:many relationships in MongoDB (Mongoose). Passwords are stored as hashes. The user is able to store snippets, make notes about them, tag them, and of course edit/delete them.</p>
+                                <h2 th:text="${project.title}"></h2>
+                                <p class="item-intro text-muted" th:text="${project.subheader}"></p>
+                                <img class="img-fluid d-block mx-auto" th:src="${project.largeUrl}" alt=""/>
+                                <p th:text="${project.description}"></p>
                                 <ul class="list-inline">
-                                    <li><a href="https://hidden-cove-46175.herokuapp.com/app/user/login" target="_blank">View Live</a></li>
-                                    <li><a href="https://github.com/jennilynhowell/week-eight-snippets" target="_blank">View Code</a></li>
-                                    <li>Date: July 2017</li>
-                                    <li>Category: Node</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 4 MYSTERYWORD-->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Mystery Word</h2>
-                                <p class="item-intro text-muted">Play a hangman-style word game.</p>
-                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/MysteryWord-large.png" alt=""/>
-                                <p>This was a really fun project -- I enjoyed the challenge of getting the computer to generate a word, then changing the display based on the word and user guesses. There is no auth but the user is required to enter his name and select a difficulty level.</p>
-                                <ul class="list-inline">
-                                    <li><a href="https://github.com/jennilynhowell/week-five-project" target="_blank">View Code</a></li>
-                                    <li>Date: June 2017</li>
-                                    <li>Category: Node</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 5 SONGBIRD -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Songbird</h2>
-                                <p class="item-intro text-muted">Fun music playback app.</p>
-                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/Songbird-large.png" alt=""/>
-                                <p>This app is connected to the SoundCloud API using JQuery. Feel free to search for and play your favorite song!</p>
-                                <ul class="list-inline">
-                                    <li><a href="https://jennilynhowell.github.io/week-four-project/" target="_blank">View Live</a></li>
-                                    <li><a href="https://github.com/jennilynhowell/week-four-project" target="_blank">View Code</a></li>
-                                    <li>Date: June 2017</li>
-                                    <li>Category: JQuery</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 6 GABBLE-->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Gabble</h2>
-                                <p class="item-intro text-muted">A sort-of twitter.</p>
-                                <img class="img-fluid d-block mx-auto" src="/assets/img/portfolio/Gabble-large.png" alt=""/>
-                                <p>This was my first real Node project that required a persistent data structure. I utilized one:many and many:many relationships in a PostgreSQL database (Sequelize). A user can create a login, share a "gab", like others' gabs, and delete his own gabs.</p>
-                                <ul class="list-inline">
-                                    <li><a href="https://github.com/jennilynhowell/week-six-project" target="_blank">View Code</a></li>
-                                    <li>Date: June 2017</li>
-                                    <li>Category: Node</li>
+                                    <li><a th:if="${project.liveUrl}" th:href="${project.liveUrl}" target="_blank">View Live</a></li>
+                                    <li><a th:href="${project.gitUrl}" target="_blank">View Code</a></li>
+                                    <li th:text="${project.monthCreated}"></li>
+                                    <li>Category: <span th:text="${project.category}"> </span></li>
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
                             </div>

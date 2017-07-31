@@ -9,6 +9,13 @@ section#contact {
     background-size: cover;
 }
 
+section#portfolio {
+    background-image: url("../img/pineapple-supply-co-124390.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
 .contact-invite {
     color: #ffffff !important;
 }
@@ -23,6 +30,5 @@ section#contact {
 
 .favicon-credit {
     font-size: 90%;
-    margin-top: -20px;
     color: #fed136;
 }

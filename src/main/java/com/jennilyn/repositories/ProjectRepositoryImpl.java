@@ -21,6 +21,11 @@ public class ProjectRepositoryImpl implements ProjectRepository {
         return jdbcTemplate.query("SELECT * FROM project", new ProjectMapper());
     }
 
+    @Override
+    public void delete(long id) {
+        jdbcTemplate.update("DELETE FROM project WHERE id = ?", id);
+    }
+
     private static class ProjectMapper implements RowMapper<Project> {
         @Override
         public Project mapRow(ResultSet resultSet, int i) throws SQLException {

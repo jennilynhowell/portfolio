@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>Portfolio Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom fonts for this template -->
+    <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'/>
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/agency.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/styles.css"/>
+    <link rel="icon" href="/assets/img/tropical-pineapple-black.png"/>
+
+</head>
+<body class="container">
+
+    <h1>Portfolio Admin</h1>
+
+    <div class="row">
+        <div class="col-md-6" th:each="project: ${projects}">
+            <ul class="list-unstyled">
+               <li><h4 th:text="${project.title}"></h4></li>
+                <li>ID: <p th:text="${project.id}"></p></li>
+                <li>Subheader: <p th:text="${project.subheader}"></p></li>
+                <li>Description: <p th:text="${project.description}"></p></li>
+                <li>GH URL: <p th:text="${project.gitUrl}"></p></li>
+                <li>Production URL: <p th:text="${project.liveUrl}"></p></li>
+                <li>Month Created: <p th:text="${project.monthCreated}"></p></li>
+                <li>Category: <p th:text="${project.category}"></p></li>
+                <li>Thumbnail URL: <p th:text="${project.thumbnailUrl}"></p></li>
+                <li>Large URL: <p th:text="${project.largeUrl}"></p></li>
+                <li>
+                    <form action="/deleteItem" method="post">
+                        <input type="hidden" value="${project.id}"/>
+                        <input type="submit" value="Delete"/>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

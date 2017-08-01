@@ -1,7 +1,7 @@
 package com.jennilyn.controllers;
 
-import com.jennilyn.interfaces.ProjectRepository;
 import com.jennilyn.models.Project;
+import com.jennilyn.repositories.ProjectRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +15,7 @@ import java.util.List;
 public class HomeController {
 
     @Autowired
-    private ProjectRepository repo;
+    private ProjectRepositoryImpl repo;
 
     @RequestMapping("/")
     public String index(Model model){
